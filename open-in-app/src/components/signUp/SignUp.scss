@@ -30,7 +30,7 @@
       position: absolute;
       width: 80px;
     }
-    .logo {
+    .logoTitle {
       color: #E0E7FF;
       font-size: 4em;
       font-weight: bold;
@@ -208,11 +208,14 @@
         left: 12%;
         transform: translateX(-50%);
       }
-      .logo {
-        left: 100px;
+      .logoTitle {
+        left: 80px;
         top: 28px;
         position: absolute;
         font-size: 1.2em;
+        color: #E0E7FF;
+        // font-size: 4em;
+        font-weight: bold;
       }
     }
 

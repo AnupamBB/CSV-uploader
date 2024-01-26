@@ -16,7 +16,7 @@ function SignUp() {
           <div>
             <img className="brandlogo" src={brandlogo} alt="" />
           </div>
-          <div className="logo">
+          <div className="logoTitle">
             BASE
           </div>
           <div className="social-links">
