@@ -1,0 +1,497 @@
+// UploadPage.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.container {
+  font-family: 'Roboto', sans-serif;
+  
+  .logo {
+    font-weight: 500;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 51px;
+    .logo-svg{
+        margin-right: 12px;
+    }
+  }
+  
+  .profile img {
+    border-radius: 9999px;
+  }
+  .main-container{
+    display: flex;
+    background: #FAFAFB;;
+  }
+  .sidebar {
+    width: 218px;
+    height: 1047px;
+    flex-shrink: 0;
+    background: #FFF;
+    .left-pannel-container{
+        margin-top: 40px;
+        .left-pannel{
+          .left-pannel-options{
+            margin-bottom: 20px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            height: 48px;
+            cursor: pointer;
+    
+            .left-pannel-options-icons{
+                margin-right: 16px;
+                width: 24px;
+                height: 24px;
+            }
+          }
+        }
+    }
+    
+  }
+  
+  .right-pannel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    background: #FAFAFB;
+    .header-container{
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        .profile{
+            margin-left: 27.61px;
+            border-radius: 50px;
+        }
+    }
+    .upload-file-container{
+        justify-content: center;
+        margin-top: 140px;
+        align-items: center;
+        display: flex;
+        width: 596px;
+        height: 367px;
+        border-radius: 8px;
+        background: var(--Light-Gohan, #FFF);
+    }
+    .page-title , .footer{
+        display: flex;
+        width: 1052px;
+        align-items: center;
+        gap: 630px;
+        color: #1f2937;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .footer{
+        margin-top: 104px;
+    }
+    .upload-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 596px;
+        height: 367px;
+        flex-shrink: 0;
+        border-radius: 8px;
+      .dropzone {
+        width: 564px;
+        height: 258px;
+        border: 2px dashed #d1d5db;
+        border-radius: 0.375rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        
+        .file-icon {
+          color: #10b981;
+          font-size: 2rem;
+        }
+        
+        p {
+          color: #6b7280;
+          
+          .browse-link {
+            color: #4f46e5;
+            cursor: pointer;
+          }
+        }
+      }
+      
+      .upload-button {
+        display: flex;
+        width: 564px;
+        height: 56px;
+        padding: 8px 16px 8px 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 8px;
+        background: #605BFF;
+        color: white;
+        border-radius: 0.375rem;
+        margin-top: 1rem;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    
+    .footer {
+      p {
+        color: #1f2937;
+        font-weight: 500;
+      }
+    }
+    .excel-data-container {
+
+        th{
+            text-align: start;
+        }
+        th, td{
+            padding-right: 48px;
+        }
+
+        td:first-child, th:first-child{
+            padding-left: 24px;  
+        }
+        .excel-table-data-rows-rounded {
+            border-radius: 8px;
+            width: 1034px;
+            height: 58px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            background: var(--Light-Gohan, #FFF);
+            .dropdown-button{
+                border-radius: 8px;
+                border: 1px solid var(--Light-Beerus-Beerus, #F2F2F2);
+                background: var(--Light-Gohan, #FFF);
+                display: flex;
+                width: 150px;
+                height: 32px;
+                padding: 12px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+            }
+            .tag-selector{
+                position: relative;
+            }
+            .dropdown-menu{
+                z-index: 10;
+                overflow: auto;
+                position: absolute;
+                border-radius: 12px;
+                background: var(--Light-Gohan, #FFF);
+                box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.40), 0px 8px 24px -6px rgba(0, 0, 0, 0.16);
+                display: flex;
+                width: 150px;
+                height: 205px;
+                padding: 8px;
+                gap: 16px;
+                flex-direction: column;
+                align-items: center;
+                .selected{
+                    border-radius: 8px;
+                    display: flex;
+                    padding: 8px;
+                    align-items: center;
+                    gap: 8px;
+                    align-self: stretch;
+                }
+                .selected:hover {
+                    background: var(--Light-Goku, #F5F5F5);
+                }
+            }
+          }
+          tr{
+            margin-bottom: 24px;
+          }
+          td:first-child {
+            border-radius: 10px 0 0 10px;
+          }
+          td:last-child {
+            border-radius: 0 10px 10px 0;
+          }
+          .selected-tags{
+            display: flex;
+            .tag{
+                border-radius: 4px;
+                display: flex;
+                padding: 4px 4px 4px 8px;
+                align-items: center;
+                gap: 4px;
+                background: #605BFF;
+                margin-right: 8px;
+            }
+          }
+
+    }
+  }
+  table{
+    border-spacing: 0 24px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+
+    .container {
+      .main-container {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .logo{
+        margin-left: 32px;
+        justify-content: left;
+        display: flex;
+      }
+      .sidebar {
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        .left-pannel-container {
+          .left-pannel {
+            flex-direction: column;
+            align-items: center;
+            .left-pannel-options {
+              width: 100%;
+            }
+          }
+        }
+      }
+  
+      .right-pannel {
+        width: 100%;
+        .header-container{
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+            .profile{
+                margin-left: 27.61px;
+                border-radius: 50px;
+            }
+        }
+        .header-container {
+          .page-title{
+            display: flex;
+            width: 200px;
+            align-items: center;
+            gap: 630px;
+            color: #1f2937;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        
+        }
+  
+        .upload-file-container {
+          width: 90%;
+          margin-top: 20px;
+        }
+  
+        .upload-area {
+          width: 90%;
+          .dropzone {
+            width: 100%;
+          }
+  
+          .upload-button {
+            width: 100%;
+          }
+        }
+  
+        .footer {
+          width: 90%;
+          margin-top: 20px;
+          p {
+            gap: 0;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  
+    table {
+      border-spacing: 0 10px;
+    }
+  
+    .tag-selector .dropdown-menu {
+      width: 90%;
+    }
+  }
+
+  
+  .sidebar {
+    transition: transform 0.3s ease;
+  
+    &.open {
+      transform: translateX(0); 
+    }
+  }
+.excel-data-container {
+    margin-bottom: 40px;
+    justify-content: center;
+    display: flex;
+    border-radius: 8px;
+    background: var(--Light-Goku, #F5F5F5);
+
+    th{
+        text-align: start;
+    }
+    th, td{
+        padding-right: 48px;
+    }
+
+    td:first-child, th:first-child{
+        padding-left: 24px;  
+    }
+    .excel-table-data-rows-rounded {
+        border-radius: 8px;
+        height: 58px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background: var(--Light-Gohan, #FFF);
+        .dropdown-button{
+            border-radius: 8px;
+            border: 1px solid var(--Light-Beerus-Beerus, #F2F2F2);
+            background: var(--Light-Gohan, #FFF);
+            display: flex;
+            width: 150px;
+            height: 32px;
+            padding: 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .dropdown-menu{
+            overflow: auto;
+            position: absolute;
+            border-radius: 12px;
+            background: var(--Light-Gohan, #FFF);
+            box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.40), 0px 8px 24px -6px rgba(0, 0, 0, 0.16);
+            display: flex;
+            width: 150px;
+            height: 205px;
+            padding: 8px;
+            gap: 16px;
+            flex-direction: column;
+            align-items: center;
+            .selected{
+                border-radius: 8px;
+                display: flex;
+                padding: 8px;
+                align-items: center;
+                gap: 8px;
+                align-self: stretch;
+            }
+            .selected:hover {
+                background: var(--Light-Goku, #F5F5F5);
+            }
+        }
+      }
+      tr{
+        margin-bottom: 24px;
+      }
+      td:first-child {
+        border-radius: 10px 0 0 10px;
+      }
+      td:last-child {
+        border-radius: 0 10px 10px 0;
+      }
+      .selected-tags{
+        display: flex;
+        .tag{
+            border-radius: 4px;
+            display: flex;
+            padding: 4px 4px 4px 8px;
+            align-items: center;
+            gap: 4px;
+            background: #605BFF;
+            margin-right: 8px;
+        }
+      }
+
+}
+  
+  @media (max-width: 768px) { // or whatever breakpoint you need
+    .sidebar {
+      transform: translateX(-100%); // Starts offscreen
+    }
+  
+    .sidebar-toggle {
+      display: block; // Only shows on mobile
+    }
+    
+  .sidebar-toggle {
+    left: 4px;
+    top: 12px;
+    position: absolute;
+    z-index: 10;
+    display: block;
+  }
+  .excel-data-container {
+    width: 400px;
+    overflow: auto;
+  }
+  .excel-table{
+    margin-left: 400px;
+  }
+  .dropdown-menu{
+    overflow: auto;
+    position: absolute;
+    border-radius: 12px;
+    background: var(--Light-Gohan, #FFF);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.40), 0px 8px 24px -6px rgba(0, 0, 0, 0.16);
+    display: flex;
+    width: 150px;
+    height: 205px;
+    padding: 8px;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+    
+  }
+  
+
+  @media (min-width: 769px) {
+    .sidebar-toggle {
+      left: -40px;
+      top: 12px;
+      position: absolute;
+      z-index: 10;
+      display: none; // Hide by default on larger screens
+    }
+    .excel-table{
+        min-width: 66vw;
+    }
+    .excel-data-container {
+        margin-bottom: 40px;
+        justify-content: center;
+        display: flex;
+        border-radius: 8px;
+        background: var(--Light-Goku, #F5F5F5);
+        width: 1065px;
+    }
+    .dropdown-menu{
+        overflow: auto;
+        position: absolute;
+        border-radius: 12px;
+        background: var(--Light-Gohan, #FFF);
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.40), 0px 8px 24px -6px rgba(0, 0, 0, 0.16);
+        display: flex;
+        width: 150px;
+        height: 205px;
+        padding: 8px;
+        gap: 16px;
+        flex-direction: column;
+        align-items: center;
+      }
+}
