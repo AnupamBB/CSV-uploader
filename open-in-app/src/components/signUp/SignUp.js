@@ -53,7 +53,8 @@ function SignUp() {
                 <input type="password" id="password" placeholder="Password" />
                 <div className="forgot-password">Forgot password?</div>
               </div>
-              <button type="submit" className="signin-button"><a  href="./uploadPage">Sign In</a></button>
+              <button type="button" className="signin-button" onClick={() => { window.location.href = './uploadPage'; }}>Sign In</button>
+
             </form>
             <div className="signup-link">
               Don't have an account? <a href="./uploadPage">Register here</a>
